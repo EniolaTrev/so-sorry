@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ <style>
+    body{
+
+        font-family: cursive;
+        display: flex;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+        background-image: url(/Pink\ Cute\ Valentines\ Day\ Phone\ Wallpaper.png); 
+        background-size: cover;
+        background-position: center;
+    }
+    
+    .valentine-container{
+
+        display: flex;
+        background-color: pink;
+        min-height: 50vh;
+        max-width: 440px;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+        margin:auto;
+        border-radius: 10px;
+        border-radius: 10px;
+        box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .valentine-text{
+        
+        font-weight: 300;
+        font-family: cursive;
+        font-size: larger;
+        padding: 20px;
+        color: beige;
+        background-color: rgb(243, 142, 142);
+        border-radius: 50px ;
+        text-align: center;
+        
+    }
+
+    .choice-button{
+        padding: 20px;
+        margin: 10px;
+        justify-content: center;
+        color: red;
+        font-family: cursive;
+        border: none;
+        border-radius: 10px;
+        font-weight: bold;
+        
+    }
+
+    button{
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+    
+    button:hover{
+        background-color: rgb(255, 189, 255);
+        color: whitesmoke;
+    }
+    
+
+    @media (max-width: 1250px){
+         .valentine-container{
+            min-height: 50vh;
+            justify-content: center;
+         }
+    }
+
+    @media (max-width: 680px){
+         .valentine-container{
+            justify-content: center;
+            min-height: 50vh;
+         }
+    }
+
+
+ </style>
+</head>
+<body class=".background-image">
+    <div class="valentine-container">
+        <div class = "valentine-text">
+            <p>AYOMIDEMI</p>
+            <P>WILL YOU BE MY VALENTINE ?💖</P>
+            <div class="Her-response">
+                <button class="choice-button yes-button">YES🤗</button>
+                <button class="choice-button no-button">NO😭</button>
+            </div> 
+        </div>
+
+      
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const yesButton = document.querySelector(".yes-button");
+            const noButton = document.querySelector(".no-button");
+
+            yesButton.addEventListener("click", function () {
+                window.location.href = "love-letter.html"; // Change to your letter's actual URL
+            });
+
+            noButton.addEventListener("mouseover", function () {
+                const maxX = 100;
+                const maxY = 100;
+                const randomX = Math.floor(Math.random() * (maxX * 2)) - maxX; // Random from -100 to 100
+                const randomY = Math.floor(Math.random() * (maxY * 2)) - maxY; // Random from -100 to 100
+                this.style.transform = `translate(${randomX}px, ${randomY}px)`;
+            });
+        });
+    </script>
+
+</body>
+</html>
